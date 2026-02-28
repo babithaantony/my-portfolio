@@ -6,86 +6,92 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero">
-      <div className="hero-content">
+      {/* Background orbs */}
+      <div className="hero-orb hero-orb-1" />
+      <div className="hero-orb hero-orb-2" />
+
+      <div className="hero-inner container">
         <div className="hero-text fade-in">
-          <p className="hero-greeting">Welcome to my portfolio</p>
-          <h1 className="hero-title">
-            Hi, I'm <span className="highlight">{personal.name}</span>
+          <div className="hero-eyebrow">
+            <span className="eyebrow-dot" />
+            Available for new opportunities
+          </div>
+
+          <h1 className="hero-heading">
+            Hey I&apos;m{" "}
+            <span className="hero-name">{personal.name}</span>
           </h1>
-          <p className="hero-subtitle">{personal.title}</p>
-          <p className="hero-description">{personal.summary}</p>
+
+          <p className="hero-role">{personal.title}</p>
+
+          <p className="hero-desc">
+            Living in {personal.location}. Building high-performance web applications
+            with React, TypeScript, and AWS — focused on clean code, great UX,
+            and measurable impact.
+          </p>
 
           <div className="hero-actions">
             <a href="#contact" className="btn btn-primary">
-              Get in Touch
+              Contact Me
             </a>
-            <a href="#projects" className="btn">
-              View My Work
+            <a href="#projects" className="btn btn-outline">
+              View Portfolio
             </a>
           </div>
 
-          <div className="hero-contact-links">
-            <a href={`mailto:${personal.email}`} title="Email">
-              <span>📧</span>
+          <div className="hero-socials">
+            <a href={`mailto:${personal.email}`} className="social-link" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
             </a>
-            <a href={`tel:${personal.phone.replace(/\D/g, "")}`} title="Phone">
-              <span>📱</span>
+            <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" />
+              </svg>
             </a>
-            <a
-              href={personal.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              title="LinkedIn"
-            >
-              <span>💼</span>
+            <a href={`tel:${personal.phone.replace(/\D/g, "")}`} className="social-link" aria-label="Phone">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12 19.79 19.79 0 0 1 1.08 3.41 2 2 0 0 1 3.05 1.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16.92z" />
+              </svg>
             </a>
           </div>
         </div>
 
         <div className="hero-visual fade-in">
-          <div className="profile-card">
-            <div className="profile-header">
-              <div className="avatar">BA</div>
-            </div>
-            <div className="profile-info">
-              <h2>{personal.name}</h2>
-              <p className="role">{personal.title}</p>
-              <p className="location">📍 {personal.location}</p>
-              <div className="profile-stats">
-                <div className="stat">
-                  <span className="stat-number">9+</span>
-                  <span className="stat-label">Years in Tech</span>
-                </div>
-                <div className="stat">
-                  <span className="stat-number">5+</span>
-                  <span className="stat-label">Modern Stack</span>
-                </div>
-                <div className="stat">
-                  <span className="stat-number">250+</span>
-                  <span className="stat-label">Features Shipped</span>
-                </div>
-              </div>
-            </div>
+          {/* Geometric accent ring */}
+          <div className="avatar-ring" />
+
+          <div className="avatar-wrap">
+            <div className="avatar-initials">BA</div>
+          </div>
+
+          {/* Floating stat cards */}
+          <div className="stat-float stat-float-1">
+            <span className="sf-num">9+</span>
+            <span className="sf-label">Years in Tech</span>
+          </div>
+          <div className="stat-float stat-float-2">
+            <span className="sf-num">250+</span>
+            <span className="sf-label">Features Shipped</span>
+          </div>
+          <div className="stat-float stat-float-3">
+            <span className="sf-num">99.9%</span>
+            <span className="sf-label">Uptime</span>
+          </div>
+
+          {/* Decorative dots grid */}
+          <div className="dots-grid" aria-hidden="true">
+            {Array.from({ length: 25 }).map((_, i) => (
+              <div key={i} className="dot" />
+            ))}
           </div>
         </div>
       </div>
 
-      <div className="scroll-indicator">
-        <span>Scroll to explore</span>
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-        >
-          <path
-            d="M12 5v14M19 12l-7 7-7-7"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+      <div className="hero-scroll">
+        <div className="scroll-line" />
+        <span>Scroll</span>
       </div>
     </section>
   );

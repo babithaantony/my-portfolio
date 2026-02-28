@@ -7,31 +7,38 @@ export default function Experience() {
   return (
     <section id="experience" className="section experience">
       <div className="container">
+        <span className="section-label">Work History</span>
         <h2 className="section-title">Professional Experience</h2>
+        <p className="section-subtitle">
+          9+ years building impactful products — from early-stage startups to high-traffic e-commerce platforms.
+        </p>
 
-        <div className="timeline">
-          {experience.map((job, index) => (
-            <div
-              key={job.id}
-              className={`timeline-item fade-in ${index % 2 === 0 ? "left" : "right"}`}
-            >
-              <div className="timeline-marker"></div>
+        <div className="exp-timeline">
+          {experience.map((job) => (
+            <div key={job.id} className="exp-item fade-in">
+              <div className="exp-marker">
+                <div className="exp-dot" />
+                <div className="exp-line" />
+              </div>
 
-              <div className="timeline-content card">
-                <div className="job-header">
-                  <h3 className="job-title">{job.title}</h3>
-                  <span className="company-badge">{job.company}</span>
+              <div className="exp-content">
+                <div className="exp-meta">
+                  <span className="exp-company">{job.company}</span>
+                  <span className="exp-period">{job.startDate} — {job.endDate}</span>
                 </div>
 
-                <p className="job-location">📍 {job.location}</p>
+                <h3 className="exp-title">{job.title}</h3>
 
-                <p className="job-dates">
-                  {job.startDate} - {job.endDate}
-                </p>
+                <div className="exp-location">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
+                  </svg>
+                  {job.location}
+                </div>
 
-                <ul className="job-highlights">
-                  {job.highlights.map((highlight, idx) => (
-                    <li key={idx}>{highlight}</li>
+                <ul className="exp-highlights">
+                  {job.highlights.map((h, i) => (
+                    <li key={i} className="exp-highlight">{h}</li>
                   ))}
                 </ul>
               </div>

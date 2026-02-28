@@ -9,8 +9,8 @@ export default function Header() {
     { label: "About", href: "#about" },
     { label: "Experience", href: "#experience" },
     { label: "Skills", href: "#skills" },
-    { label: "Testimonials", href: "#testimonials" },
     { label: "Projects", href: "#projects" },
+    { label: "Testimonials", href: "#testimonials" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -18,7 +18,8 @@ export default function Header() {
     <header className="header">
       <div className="header-content">
         <div className="logo">
-          <span className="logo-text">BA</span>
+          <div className="logo-mark">BA</div>
+          <span className="logo-name">Babitha</span>
         </div>
 
         <button
@@ -42,6 +43,9 @@ export default function Header() {
               {item.label}
             </a>
           ))}
+          <a href="#contact" className="header-cta" onClick={() => setIsOpen(false)}>
+            Hire Me
+          </a>
         </nav>
       </div>
     </header>

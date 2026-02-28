@@ -3,145 +3,102 @@ import { portfolioData } from "../data/portfolioData";
 import "./Testimonials.css";
 
 export default function Testimonials() {
-  const { testimonials, testimonialStats, professionalRecommendations } =
-    portfolioData;
+  const { testimonials, testimonialStats, professionalRecommendations } = portfolioData;
   const [activeTab, setActiveTab] = useState("professional");
 
-  const renderStars = (rating) => {
-    return (
-      <div className="stars">
-        {[...Array(5)].map((_, i) => (
-          <span key={i} className={`star ${i < rating ? "filled" : ""}`}>
-            ★
-          </span>
-        ))}
-      </div>
-    );
-  };
+  const renderStars = (rating) =>
+    [...Array(5)].map((_, i) => (
+      <span key={i} className={`star ${i < rating ? "filled" : ""}`}>★</span>
+    ));
 
   return (
     <section id="testimonials" className="section testimonials">
       <div className="container">
-        <h2 className="section-title">Testimonials & Recommendations</h2>
+        <span className="section-label">Kind Words</span>
+        <h2 className="section-title">Testimonials &amp; Recommendations</h2>
+        <p className="section-subtitle">
+          What colleagues, managers, and clients say about working with me.
+        </p>
 
-        <div className="testimonial-tabs fade-in">
+        <div className="t-tabs fade-in">
           <button
-            className={`tab-button ${activeTab === "professional" ? "active" : ""}`}
+            className={`t-tab ${activeTab === "professional" ? "active" : ""}`}
             onClick={() => setActiveTab("professional")}
           >
             Professional Recommendations
           </button>
           <button
-            className={`tab-button ${activeTab === "clients" ? "active" : ""}`}
+            className={`t-tab ${activeTab === "clients" ? "active" : ""}`}
             onClick={() => setActiveTab("clients")}
           >
-            Client Testimonials
+            Client Reviews
           </button>
         </div>
 
         {activeTab === "professional" && (
-          <div className="testimonials-section fade-in">
-            <div className="testimonials-grid">
-              {professionalRecommendations.map((rec) => (
-                <div key={rec.id} className="testimonial-card card">
-                  <div className="testimonial-header">
-                    <div className="testimonial-info">
-                      <h4 className="client-name">{rec.name}</h4>
-                      <p className="client-role">{rec.title}</p>
-                      <p className="client-location">at {rec.company}</p>
-                    </div>
-                    <span
-                      className={`relationship-badge ${rec.relationship.toLowerCase()}`}
-                    >
-                      {rec.relationship}
-                    </span>
+          <div className="t-grid fade-in">
+            {professionalRecommendations.map((rec) => (
+              <div key={rec.id} className="t-card">
+                <div className="t-quote-mark">"</div>
+                <p className="t-text">{rec.text}</p>
+                <div className="t-footer">
+                  <div className="t-avatar">{rec.name.charAt(0)}</div>
+                  <div className="t-author">
+                    <span className="t-name">{rec.name}</span>
+                    <span className="t-role">{rec.title} · {rec.company}</span>
                   </div>
-
-                  <span className="highlight-badge">{rec.highlight}</span>
-
-                  <p className="testimonial-text">"{rec.text}"</p>
-
-                  <p className="testimonial-date">{rec.date}</p>
+                  <span className={`t-badge t-badge-${rec.relationship.toLowerCase()}`}>
+                    {rec.relationship}
+                  </span>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         )}
 
         {activeTab === "clients" && (
-          <div className="testimonials-section fade-in">
-            <div className="testimonial-stats fade-in">
-              <div className="stat-item">
-                <span className="stat-value">
-                  {testimonialStats.averageRating}
-                </span>
-                <span className="stat-label">Average Rating</span>
-                <div className="stat-stars">
-                  {[...Array(5)].map((_, i) => (
-                    <span
-                      key={i}
-                      className={`star ${i < 4 ? "filled" : "half"}`}
-                    >
-                      ★
-                    </span>
-                  ))}
-                </div>
+          <div className="fade-in">
+            <div className="t-stats-row">
+              <div className="t-stat">
+                <span className="t-stat-num">{testimonialStats.averageRating}</span>
+                <div className="t-stat-stars">{renderStars(5)}</div>
+                <span className="t-stat-label">Average Rating</span>
               </div>
-              <div className="stat-item">
-                <span className="stat-value">
-                  {testimonialStats.totalReviews}
-                </span>
-                <span className="stat-label">Total Reviews</span>
+              <div className="t-stat">
+                <span className="t-stat-num">{testimonialStats.totalReviews}</span>
+                <span className="t-stat-label">Total Reviews</span>
               </div>
-              <div className="stat-item">
-                <span className="stat-value">
-                  {testimonialStats.positiveRating}
-                </span>
-                <span className="stat-label">Positive Rating</span>
+              <div className="t-stat">
+                <span className="t-stat-num">{testimonialStats.positiveRating}</span>
+                <span className="t-stat-label">Positive</span>
               </div>
-              <div className="stat-item">
-                <span className="stat-label">
-                  From {testimonialStats.source}
-                </span>
+              <div className="t-stat">
+                <span className="t-stat-source">from {testimonialStats.source}</span>
               </div>
             </div>
 
-            <div className="testimonials-grid">
-              {testimonials.map((testimonial) => (
-                <div key={testimonial.id} className="testimonial-card card">
-                  <div className="testimonial-header">
-                    <div className="testimonial-info">
-                      <h4 className="client-name">{testimonial.name}</h4>
-                      <p className="client-location">
-                        📍 {testimonial.location}
-                      </p>
+            <div className="t-grid">
+              {testimonials.map((t) => (
+                <div key={t.id} className="t-card">
+                  <div className="t-stars">{renderStars(t.rating)}</div>
+                  <span className="t-highlight">{t.highlight}</span>
+                  <p className="t-text">"{t.text}"</p>
+                  <div className="t-footer">
+                    <div className="t-avatar">{t.name.charAt(0)}</div>
+                    <div className="t-author">
+                      <span className="t-name">{t.name}</span>
+                      <span className="t-role">{t.location} · {t.date}</span>
                     </div>
                   </div>
-
-                  {renderStars(testimonial.rating)}
-
-                  <span className="highlight-badge">
-                    {testimonial.highlight}
-                  </span>
-
-                  <p className="testimonial-text">"{testimonial.text}"</p>
-
-                  <p className="testimonial-date">{testimonial.date}</p>
                 </div>
               ))}
             </div>
           </div>
         )}
 
-        <div className="testimonial-cta fade-in">
+        <div className="t-cta fade-in">
           <h3>Ready to work together?</h3>
-          <p>
-            I take pride in delivering excellent work and exceeding
-            expectations. Let's collaborate on your next project.
-          </p>
-          <a href="#contact" className="btn btn-primary">
-            Let’s Connect
-          </a>
+          <a href="#contact" className="btn btn-primary">Let&apos;s Connect</a>
         </div>
       </div>
     </section>
