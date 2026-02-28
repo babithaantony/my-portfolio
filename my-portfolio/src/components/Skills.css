@@ -1,0 +1,134 @@
+.skills {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 1) 0%,
+    rgba(30, 41, 59, 0.5) 100%
+  );
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.skill-category {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-category:hover {
+  border-color: var(--accent-color);
+}
+
+.category-title {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills-list .badge {
+  padding: 8px 14px;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid var(--accent-color);
+  color: var(--accent-light);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skills-list .badge:hover {
+  background: rgba(59, 130, 246, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
+}
+
+.skills-summary {
+  margin-top: 60px;
+}
+
+.summary-card {
+  background: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.summary-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+}
+
+.specializations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.spec-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(59, 130, 246, 0.05);
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.spec-item:hover {
+  background: rgba(59, 130, 246, 0.1);
+  transform: translateX(5px);
+}
+
+.spec-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.spec-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.spec-item p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-card {
+    padding: 25px;
+  }
+
+  .specializations {
+    grid-template-columns: 1fr;
+  }
+
+  .spec-item {
+    gap: 15px;
+  }
+
+  .spec-icon {
+    font-size: 1.5rem;
+  }
+}
