@@ -143,13 +143,6 @@ export default function Hero() {
             <span className="sf-num">100+</span>
             <span className="sf-label">Components developed</span>
           </div>
-
-          {/* Decorative dots grid */}
-          <div className="dots-grid" aria-hidden="true">
-            {Array.from({ length: 25 }).map((_, i) => (
-              <div key={i} className="dot" />
-            ))}
-          </div>
         </div>
       </div>
 

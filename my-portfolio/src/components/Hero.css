@@ -306,25 +306,6 @@
   white-space: nowrap;
 }
 
-/* Dots grid decoration */
-.dots-grid {
-  position: absolute;
-  bottom: 30px;
-  right: 10px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 8px;
-  opacity: 0.25;
-  z-index: 1;
-}
-
-.dot {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--text-muted);
-}
-
 /* Scroll indicator */
 .hero-scroll {
   position: absolute;
@@ -335,30 +316,32 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-family: "Instrument Sans", sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   z-index: 5;
+  opacity: 0.85;
 }
 
 .scroll-line {
-  width: 1px;
-  height: 36px;
+  width: 2px;
+  height: 44px;
   background: linear-gradient(to bottom, var(--accent), transparent);
+  border-radius: 2px;
   animation: scroll-anim 2s ease-in-out infinite;
 }
 
 @keyframes scroll-anim {
   0%,
   100% {
-    opacity: 0.3;
+    opacity: 0.5;
     transform: scaleY(1);
   }
   50% {
     opacity: 1;
-    transform: scaleY(1.2);
+    transform: scaleY(1.25);
   }
 }
 
