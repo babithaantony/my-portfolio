@@ -1,0 +1,190 @@
+/*
+ * THEME DEFINITIONS
+ * -----------------
+ * To switch themes: change data-theme="..." on <html> in index.html
+ * To add a theme: copy the template block at the bottom, give it a new name, adjust the values.
+ *
+ * Available themes:
+ *   "rose"           – soft rose/coral pink (default)
+ *   "teal"           – fresh cyan teal
+ *   "burned-orange"  – warm earthy burnt orange
+ *   "blue"           – clean classic blue
+ *   "pastel-green"   – soft mint green
+ *   "warm-stone"     – warm greige/mauve derived from #B1A6A4
+ *   "slate"          – cool blue-gray derived from #697184
+ *   "charcoal"       – warm dark charcoal derived from #413F3D
+ */
+
+/* ─── Rose (default) ──────────────────────────────────────────────────────── */
+:root,
+[data-theme="rose"] {
+  --bg-primary: #fdf6f8;
+  --bg-primary-rgb: 253, 246, 248;
+  --bg-secondary: #f5eaee;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fff5f7;
+  --accent: #e11d48;
+  --accent-light: #f43f5e;
+  --accent-rgb: 225, 29, 72;
+  --accent-glow: rgba(var(--accent-rgb), 0.08);
+  --avatar-bg: linear-gradient(145deg, #fce8ec, #f5d5db);
+  --text-primary: #2a1520;
+  --text-secondary: #6e4f5a;
+  --text-muted: #b08898;
+  --border: rgba(0, 0, 0, 0.07);
+  --border-accent: rgba(var(--accent-rgb), 0.2);
+}
+
+/* ─── Teal ────────────────────────────────────────────────────────────────── */
+[data-theme="teal"] {
+  --bg-primary: #f5fafb;
+  --bg-primary-rgb: 245, 250, 251;
+  --bg-secondary: #e6f4f7;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0fafc;
+  --accent: #0ea5c9;
+  --accent-light: #38bdf8;
+  --accent-rgb: 14, 165, 201;
+  --accent-glow: rgba(14, 165, 201, 0.08);
+  --avatar-bg: linear-gradient(145deg, #ddf3fa, #c4eaf5);
+  --text-primary: #0d2530;
+  --text-secondary: #3d6070;
+  --text-muted: #7eaab8;
+  --border: rgba(0, 0, 0, 0.07);
+  --border-accent: rgba(14, 165, 201, 0.2);
+}
+
+/* ─── Burned Orange ───────────────────────────────────────────────────────── */
+[data-theme="burned-orange"] {
+  --bg-primary: #fdf8f5;
+  --bg-primary-rgb: 253, 248, 245;
+  --bg-secondary: #faeee5;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fff7f2;
+  --accent: #c2410c;
+  --accent-light: #ea580c;
+  --accent-rgb: 194, 65, 12;
+  --accent-glow: rgba(var(--accent-rgb), 0.08);
+  --avatar-bg: linear-gradient(145deg, #fde8d8, #fbd5bc);
+  --text-primary: #1c0f06;
+  --text-secondary: #6b3d1e;
+  --text-muted: #b07a5a;
+  --border: rgba(0, 0, 0, 0.07);
+  --border-accent: rgba(var(--accent-rgb), 0.2);
+}
+
+/* ─── Blue ────────────────────────────────────────────────────────────────── */
+[data-theme="blue"] {
+  --bg-primary: #f5f7ff;
+  --bg-primary-rgb: 245, 247, 255;
+  --bg-secondary: #eaedfa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0f3ff;
+  --accent: #2563eb;
+  --accent-light: #3b82f6;
+  --accent-rgb: 37, 99, 235;
+  --accent-glow: rgba(var(--accent-rgb), 0.08);
+  --avatar-bg: linear-gradient(145deg, #dce8fd, #c5d9fb);
+  --text-primary: #0f1c40;
+  --text-secondary: #3d4f7a;
+  --text-muted: #7e8fb8;
+  --border: rgba(0, 0, 0, 0.07);
+  --border-accent: rgba(var(--accent-rgb), 0.2);
+}
+
+/* ─── Pastel Green ────────────────────────────────────────────────────────── */
+[data-theme="pastel-green"] {
+  --bg-primary: #f4fbf6;
+  --bg-primary-rgb: 244, 251, 246;
+  --bg-secondary: #e5f5eb;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0faf3;
+  --accent: #16a34a;
+  --accent-light: #22c55e;
+  --accent-rgb: 22, 163, 74;
+  --accent-glow: rgba(var(--accent-rgb), 0.08);
+  --avatar-bg: linear-gradient(145deg, #d4f0de, #bde8cb);
+  --text-primary: #0c1f12;
+  --text-secondary: #3a5c42;
+  --text-muted: #7aab85;
+  --border: rgba(0, 0, 0, 0.07);
+  --border-accent: rgba(var(--accent-rgb), 0.2);
+}
+
+/* ─── Warm Stone ──────────────────────────────────────────────────────────── */
+[data-theme="warm-stone"] {
+  --bg-primary: #faf7f6;
+  --bg-primary-rgb: 250, 247, 246;
+  --bg-secondary: #f2edec;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fdf9f8;
+  --accent: #9b7472;
+  --accent-light: #b19391;
+  --accent-rgb: 155, 116, 114;
+  --accent-glow: rgba(var(--accent-rgb), 0.08);
+  --avatar-bg: linear-gradient(145deg, #ede3e2, #e3d5d4);
+  --text-primary: #2a1c1b;
+  --text-secondary: #6b4f4e;
+  --text-muted: #b1a6a4;
+  --border: rgba(0, 0, 0, 0.07);
+  --border-accent: rgba(var(--accent-rgb), 0.2);
+}
+
+/* ─── Slate ───────────────────────────────────────────────────────────────── */
+[data-theme="slate"] {
+  --bg-primary: #f5f6f9;
+  --bg-primary-rgb: 245, 246, 249;
+  --bg-secondary: #eaedf4;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0f2f8;
+  --accent: #4d5a7c;
+  --accent-light: #697184;
+  --accent-rgb: 77, 90, 124;
+  --accent-glow: rgba(var(--accent-rgb), 0.08);
+  --avatar-bg: linear-gradient(145deg, #dde1ee, #ccd2e4);
+  --text-primary: #1a1f2e;
+  --text-secondary: #4a5168;
+  --text-muted: #697184;
+  --border: rgba(0, 0, 0, 0.07);
+  --border-accent: rgba(var(--accent-rgb), 0.2);
+}
+
+/* ─── Charcoal ────────────────────────────────────────────────────────────── */
+[data-theme="charcoal"] {
+  --bg-primary: #f8f6f4;
+  --bg-primary-rgb: 248, 246, 244;
+  --bg-secondary: #f0ece8;
+  --bg-card: #ffffff;
+  --bg-card-hover: #faf8f6;
+  --accent: #413f3d;
+  --accent-light: #6b6360;
+  --accent-rgb: 65, 63, 61;
+  --accent-glow: rgba(var(--accent-rgb), 0.08);
+  --avatar-bg: linear-gradient(145deg, #e8e3df, #dcd6d1);
+  --text-primary: #1e1c1b;
+  --text-secondary: #5a5350;
+  --text-muted: #9e9896;
+  --border: rgba(0, 0, 0, 0.07);
+  --border-accent: rgba(var(--accent-rgb), 0.2);
+}
+
+/* ─── Add new themes below ────────────────────────────────────────────────── */
+/*
+[data-theme="my-theme"] {
+  --bg-primary: ...;
+  --bg-primary-rgb: R, G, B;
+  --bg-secondary: ...;
+  --bg-card: #ffffff;
+  --bg-card-hover: ...;
+  --accent: ...;
+  --accent-light: ...;
+  --accent-rgb: R, G, B;
+  --accent-glow: rgba(var(--accent-rgb), 0.08);
+  --avatar-bg: linear-gradient(145deg, ...);
+  --text-primary: ...;
+  --text-secondary: ...;
+  --text-muted: ...;
+  --border: rgba(0, 0, 0, 0.07);
+  --border-accent: rgba(var(--accent-rgb), 0.2);
+}
+*/

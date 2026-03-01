@@ -1,22 +1,9 @@
+@import "./themes.css";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-:root {
-  --bg-primary: #f8f9fc;
-  --bg-secondary: #eef1f8;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f4f7ff;
-  --accent: #3b6ef0;
-  --accent-light: #5f8af7;
-  --accent-glow: rgba(59, 110, 240, 0.1);
-  --text-primary: #0d1730;
-  --text-secondary: #4a5568;
-  --text-muted: #94a3b8;
-  --border: rgba(0, 0, 0, 0.08);
-  --border-accent: rgba(59, 110, 240, 0.25);
 }
 
 html {
@@ -98,7 +85,7 @@ button {
   border-color: var(--border-accent);
   background: var(--bg-card-hover);
   transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(59, 110, 240, 0.1);
+  box-shadow: 0 20px 50px rgba(var(--accent-rgb), 0.1);
 }
 
 .btn {
@@ -134,24 +121,24 @@ button {
   border-color: var(--accent-light);
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(59, 110, 240, 0.3);
+  box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.3);
 }
 
 .badge {
   display: inline-block;
   padding: 5px 13px;
-  background: rgba(59, 110, 240, 0.08);
+  background: rgba(var(--accent-rgb), 0.08);
   color: var(--accent);
   border-radius: 50px;
   font-size: 0.82rem;
   font-weight: 500;
   margin: 4px 4px 4px 0;
-  border: 1px solid rgba(59, 110, 240, 0.18);
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
   transition: all 0.2s ease;
 }
 
 .badge:hover {
-  background: rgba(59, 110, 240, 0.14);
+  background: rgba(var(--accent-rgb), 0.14);
   border-color: var(--accent);
 }
 

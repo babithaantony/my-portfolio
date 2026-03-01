@@ -22,7 +22,7 @@
   height: 600px;
   background: radial-gradient(
     circle,
-    rgba(59, 110, 240, 0.12),
+    rgba(var(--accent-rgb), 0.12),
     transparent 70%
   );
   top: -100px;
@@ -34,7 +34,7 @@
   height: 500px;
   background: radial-gradient(
     circle,
-    rgba(95, 138, 247, 0.08),
+    rgba(var(--accent-rgb), 0.06),
     transparent 70%
   );
   bottom: -100px;
@@ -96,7 +96,7 @@
 }
 
 .hero-name {
-  background: linear-gradient(135deg, #3b6ef0 0%, #7aa3f7 100%);
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -172,7 +172,7 @@
   background: var(--bg-card-hover);
   border-color: var(--border-accent);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(59, 110, 240, 0.15);
+  box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.15);
 }
 
 /* RIGHT — visual */
@@ -189,7 +189,7 @@
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: 1.5px solid rgba(59, 110, 240, 0.2);
+  border: 1.5px solid rgba(var(--accent-rgb), 0.2);
   animation: rotate-ring 18s linear infinite;
 }
 
@@ -219,23 +219,23 @@
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  background: linear-gradient(145deg, #e8edf8, #dce5f5);
-  border: 2px solid rgba(59, 110, 240, 0.2);
+  background: var(--avatar-bg);
+  border: 2px solid rgba(var(--accent-rgb), 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 2;
   box-shadow:
-    0 0 60px rgba(59, 110, 240, 0.12),
-    inset 0 0 40px rgba(59, 110, 240, 0.04);
+    0 0 60px rgba(var(--accent-rgb), 0.12),
+    inset 0 0 40px rgba(var(--accent-rgb), 0.04);
 }
 
 .avatar-initials {
   font-family: "Manrope", sans-serif;
   font-size: 4rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #3b6ef0, #7aa3f7);
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
