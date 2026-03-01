@@ -1,26 +1,21 @@
-.header {
+/* ─── Sidebar ─────────────────────────────────────────────────────────────── */
+.sidebar {
   position: fixed;
+  left: 0;
   top: 0;
-  width: 100%;
-  background: rgba(var(--bg-primary-rgb), 0.92);
+  height: 100vh;
+  width: 240px;
+  background: rgba(var(--bg-primary-rgb), 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  border-right: 1px solid var(--border);
   z-index: 1000;
-  padding: 18px 0;
-  transition: background 0.3s ease;
-}
-
-.header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
+  flex-direction: column;
+  padding: 32px 20px;
 }
 
+/* ─── Logo ────────────────────────────────────────────────────────────────── */
 .logo {
   font-family: 'Manrope', sans-serif;
   font-size: 1.3rem;
@@ -28,6 +23,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 40px;
   flex-shrink: 0;
 }
 
@@ -43,6 +39,7 @@
   font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: -0.5px;
+  flex-shrink: 0;
 }
 
 .logo-name {
@@ -50,21 +47,23 @@
   letter-spacing: -0.3px;
 }
 
-.nav {
+/* ─── Nav links ───────────────────────────────────────────────────────────── */
+.sidebar-nav {
+  flex: 1;
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .nav-link {
-  padding: 8px 14px;
+  padding: 10px 14px;
   border-radius: 8px;
   color: var(--text-secondary);
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.2s ease;
-  white-space: nowrap;
+  display: block;
 }
 
 .nav-link:hover {
@@ -72,6 +71,113 @@
   background: rgba(0, 0, 0, 0.05);
 }
 
+/* ─── Footer (theme + CTA) ────────────────────────────────────────────────── */
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* ─── Theme switcher ──────────────────────────────────────────────────────── */
+.theme-switcher {
+  display: none;
+}
+
+.theme-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.85rem;
+}
+
+.theme-btn:hover {
+  border-color: var(--border-accent);
+  background: var(--bg-card-hover);
+}
+
+.theme-btn-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.theme-btn-label {
+  flex: 1;
+  text-align: left;
+}
+
+.theme-dropdown {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 6px;
+  box-shadow: 0 -12px 32px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: background 0.15s ease;
+  color: var(--text-secondary);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.theme-option:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.theme-option.active {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.theme-option-swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.theme-option-label {
+  flex: 1;
+}
+
+.theme-check {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ─── Hire Me CTA ─────────────────────────────────────────────────────────── */
 .header-cta {
   padding: 10px 22px;
   border-radius: 50px;
@@ -80,10 +186,9 @@
   font-family: 'Instrument Sans', sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
-  border: none;
-  flex-shrink: 0;
+  text-align: center;
   transition: all 0.25s ease;
-  display: inline-block;
+  display: block;
 }
 
 .header-cta:hover {
@@ -93,8 +198,13 @@
   box-shadow: 0 6px 20px rgba(var(--accent-rgb), 0.3);
 }
 
-.hamburger {
+/* ─── Mobile top bar ──────────────────────────────────────────────────────── */
+.mobile-bar {
   display: none;
+}
+
+.hamburger {
+  display: flex;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -130,42 +240,49 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-@media (max-width: 900px) {
-  .hamburger {
-    display: flex;
-  }
+/* ─── Mobile overlay ──────────────────────────────────────────────────────── */
+.sidebar-overlay {
+  display: none;
+}
 
-  .nav {
-    position: absolute;
-    top: 100%;
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .mobile-bar {
+    display: flex;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
-    flex-direction: column;
-    align-items: stretch;
-    background: rgba(var(--bg-primary-rgb), 0.98);
+    height: 64px;
+    background: rgba(var(--bg-primary-rgb), 0.95);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
-    padding: 16px 24px;
-    gap: 4px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.35s ease;
+    z-index: 1001;
+    padding: 0 24px;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .nav.active {
-    max-height: 500px;
-    padding: 20px 24px;
+  .mobile-bar .logo {
+    margin-bottom: 0;
   }
 
-  .nav-link {
-    padding: 12px 16px;
-    border-radius: 10px;
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
+    padding-top: 88px;
   }
 
-  .header-cta {
-    margin-top: 8px;
-    text-align: center;
-    border-radius: 10px;
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay {
     display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999;
   }
 }

@@ -1,12 +1,12 @@
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 120px 0 80px;
+  padding: 50px 0 80px;
   position: relative;
   overflow: hidden;
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
 }
 
 /* Background orbs */
@@ -44,8 +44,9 @@
 .hero-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+  gap: 60px;
+  align-items: stretch;
+  /* min-height: calc(100vh - 140px); */
   position: relative;
   z-index: 1;
 }
@@ -178,19 +179,14 @@
 /* RIGHT — visual */
 .hero-visual {
   position: relative;
+  height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 480px;
 }
 
 .avatar-ring {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(var(--accent-rgb), 0.2);
-  animation: rotate-ring 18s linear infinite;
+  display: none;
 }
 
 .avatar-ring::before {
@@ -216,19 +212,29 @@
 }
 
 .avatar-wrap {
-  width: 220px;
-  height: 220px;
+  position: relative;
+  width: 415px;
+  height: 500px;
   border-radius: 50%;
   background: var(--avatar-bg);
-  border: 2px solid rgba(var(--accent-rgb), 0.2);
+  border: 2px solid rgba(var(--accent-rgb), 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  z-index: 2;
+  overflow: hidden;
   box-shadow:
-    0 0 60px rgba(var(--accent-rgb), 0.12),
+    0 0 80px rgba(var(--accent-rgb), 0.12),
     inset 0 0 40px rgba(var(--accent-rgb), 0.04);
+}
+
+.avatar-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .avatar-initials {
@@ -370,7 +376,7 @@
   }
 
   .hero-visual {
-    height: 360px;
+    min-height: 380px;
   }
 
   .stat-float-1 {
@@ -403,20 +409,10 @@
   }
 
   .hero-visual {
-    height: 280px;
-  }
-
-  .avatar-wrap {
-    width: 160px;
-    height: 160px;
+    min-height: 300px;
   }
 
   .avatar-initials {
     font-size: 3rem;
-  }
-
-  .avatar-ring {
-    width: 220px;
-    height: 220px;
   }
 }

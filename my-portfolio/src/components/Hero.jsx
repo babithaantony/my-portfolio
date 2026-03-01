@@ -123,6 +123,15 @@ export default function Hero() {
           <div className="avatar-ring" />
 
           <div className="avatar-wrap">
+            {/* To show your photo: add it as public/profile-photo.jpeg */}
+            <img
+              src="/profile-photo.jpeg"
+              alt={personal.name}
+              className="avatar-photo"
+              onError={(e) => {
+                e.currentTarget.style.display = "none";
+              }}
+            />
             <div className="avatar-initials">BA</div>
           </div>
 

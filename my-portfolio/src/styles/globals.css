@@ -178,3 +178,15 @@ button {
     margin-bottom: 40px;
   }
 }
+
+/* ─── Sidebar layout offset ───────────────────────────────────────────────── */
+.main-content {
+  margin-left: 240px;
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    margin-left: 0;
+    padding-top: 64px;
+  }
+}

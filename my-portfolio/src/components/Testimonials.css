@@ -17,7 +17,7 @@
 .t-tab {
   padding: 10px 22px;
   border-radius: 8px;
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: "Instrument Sans", sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--text-secondary);
@@ -88,7 +88,7 @@
 }
 
 .t-highlight {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: "Instrument Sans", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--accent);
@@ -125,7 +125,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
   color: #fff;
@@ -159,7 +159,7 @@
 
 .t-badge-manager {
   background: rgba(var(--accent-rgb), 0.08);
-  color: var(--accent);
+  color: #ed6561; /* var(--accent); */
   border: 1px solid rgba(var(--accent-rgb), 0.2);
 }
 
@@ -196,7 +196,7 @@
 }
 
 .t-stat-num {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 2rem;
   font-weight: 800;
   color: var(--text-primary);
@@ -233,7 +233,7 @@
 }
 
 .t-cta h3 {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-primary);
