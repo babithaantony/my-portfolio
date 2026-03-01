@@ -38,9 +38,9 @@ export const portfolioData = {
       startDate: "April 2013",
       endDate: "March 2016",
       highlights: [
-        "Directed user research initiatives across 12 client projects over 3 years, utilizing peoplePerHour to inform requirements gathering.",
+        "Directed user research initiatives across 90+ client projects over 3 years, utilizing peoplePerHour to inform requirements gathering.",
         "Built and maintained dynamic web applications using PHP, MySQL, CakePHP, and jQuery for multiple high-traffic websites.",
-        "Provided ongoing technical advisory and implementation support on a weekly basis for 12+ clients over 3 years.",
+        "Provided ongoing technical advisory and implementation support on a weekly basis for 40+ clients over 3 years.",
         "Managed the role of technical owner for 10+ mid-scale SaaS projects, overseeing end-to-end technical delivery using Jira and GitHub, consistently meeting 98% on-time milestones.",
         "Resolved complex technical issues and delivered custom feature implementations for diverse client requirements.",
       ],
@@ -111,19 +111,8 @@ export const portfolioData = {
       "Component Architecture",
       "A/B Testing",
     ],
-    databases: [
-      "MySQL",
-      "DynamoDB",
-      "NoSQL",
-      "Relational Databases",
-    ],
-    legacy: [
-      "PHP",
-      "CakePHP",
-      "jQuery",
-      "Apache",
-      "cPanel",
-    ],
+    databases: ["MySQL", "DynamoDB", "NoSQL", "Relational Databases"],
+    legacy: ["PHP", "CakePHP", "jQuery", "Apache", "cPanel"],
   },
 
   projects: [
@@ -134,7 +123,7 @@ export const portfolioData = {
         "Redesigned 30+ UI workflows for purple.com using React and MUI X, resulting in 22% increase in customer satisfaction and 28% reduction in user-reported issues.",
       technologies: ["React", "TypeScript", "MUI X", "Figma", "CSS3"],
       impact: "22% increase in customer satisfaction",
-      year: "2023-2024",
+      year: "2023-2026",
     },
     {
       id: 2,
@@ -143,7 +132,7 @@ export const portfolioData = {
         "Designed and implemented serverless microservices using AWS Lambda, API Gateway, and SQS, enabling event-driven, decoupled architectures that improved system scalability.",
       technologies: ["AWS Lambda", "API Gateway", "SQS", "Node.js"],
       impact: "Improved system scalability and reduced operational overhead",
-      year: "2022-2023",
+      year: "2022-2026",
     },
     {
       id: 3,
@@ -152,7 +141,7 @@ export const portfolioData = {
         "Developed and maintained 100+ reusable React components for dynamic e-commerce modules, leveraging React Hooks and Context API to accelerate UI development.",
       technologies: ["React", "TypeScript", "Context API", "Storybook"],
       impact: "Accelerated UI development across 30+ production workflows",
-      year: "2021-2025",
+      year: "2021-2026",
     },
     {
       id: 4,
@@ -161,7 +150,7 @@ export const portfolioData = {
         "Optimized frontend-backend workflows through strategic code splitting, lazy loading, and state management improvements, achieving 25% increase in platform performance.",
       technologies: ["React", "Webpack", "Performance Metrics", "AWS"],
       impact: "25% increase in platform performance",
-      year: "2021-2025",
+      year: "2021-2026",
     },
     {
       id: 5,
@@ -169,7 +158,8 @@ export const portfolioData = {
       description:
         "Developed and maintained multiple high-traffic web applications using PHP, MySQL, CakePHP, and jQuery. Built robust e-commerce solutions with integrated payment processing APIs and custom feature implementations for diverse client requirements.",
       technologies: ["PHP", "MySQL", "CakePHP", "jQuery", "REST APIs"],
-      impact: "Delivered 5+ production e-commerce products and 10+ client customizations",
+      impact:
+        "Delivered 5+ production e-commerce products and 10+ client customizations",
       year: "2011-2016",
     },
   ],

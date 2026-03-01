@@ -20,7 +20,7 @@
 .skill-cat:hover {
   border-color: var(--border-accent);
   transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+  box-shadow: 0 16px 40px rgba(59, 110, 240, 0.1);
 }
 
 .skill-cat-header {
@@ -54,8 +54,8 @@
   align-items: center;
   gap: 5px;
   padding: 5px 11px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.07);
   border-radius: 8px;
   font-size: 0.8rem;
   font-weight: 500;
@@ -64,9 +64,9 @@
 }
 
 .skill-tag:hover {
-  color: var(--text-primary);
-  background: rgba(76, 126, 243, 0.1);
-  border-color: rgba(76, 126, 243, 0.25);
+  color: var(--accent);
+  background: rgba(59, 110, 240, 0.07);
+  border-color: rgba(59, 110, 240, 0.2);
 }
 
 .skill-tag-icon {
@@ -81,7 +81,7 @@
 }
 
 .spec-card {
-  background: linear-gradient(135deg, var(--bg-card), rgba(76, 126, 243, 0.04));
+  background: linear-gradient(135deg, var(--bg-card), rgba(59, 110, 240, 0.03));
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 28px 24px;
@@ -92,7 +92,7 @@
 .spec-card:hover {
   border-color: var(--border-accent);
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(76, 126, 243, 0.08);
+  box-shadow: 0 16px 40px rgba(59, 110, 240, 0.1);
 }
 
 .spec-icon-wrap {

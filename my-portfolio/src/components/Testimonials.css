@@ -59,7 +59,7 @@
 .t-card:hover {
   border-color: var(--border-accent);
   transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+  box-shadow: 0 16px 40px rgba(59, 110, 240, 0.1);
 }
 
 .t-quote-mark {
@@ -94,8 +94,8 @@
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  background: rgba(76, 126, 243, 0.1);
-  border: 1px solid rgba(76, 126, 243, 0.2);
+  background: rgba(59, 110, 240, 0.08);
+  border: 1px solid rgba(59, 110, 240, 0.2);
   padding: 3px 10px;
   border-radius: 50px;
   align-self: flex-start;
@@ -158,15 +158,15 @@
 }
 
 .t-badge-manager {
-  background: rgba(76, 126, 243, 0.12);
-  color: var(--accent-light);
-  border: 1px solid rgba(76, 126, 243, 0.2);
+  background: rgba(59, 110, 240, 0.08);
+  color: var(--accent);
+  border: 1px solid rgba(59, 110, 240, 0.2);
 }
 
 .t-badge-colleague {
-  background: rgba(34, 197, 94, 0.1);
-  color: #4ade80;
-  border: 1px solid rgba(34, 197, 94, 0.2);
+  background: rgba(34, 197, 94, 0.08);
+  color: #16a34a;
+  border: 1px solid rgba(34, 197, 94, 0.25);
 }
 
 /* Stats row (clients) */

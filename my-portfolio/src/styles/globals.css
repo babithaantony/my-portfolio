@@ -5,18 +5,18 @@
 }
 
 :root {
-  --bg-primary: #08090e;
-  --bg-secondary: #0f1117;
-  --bg-card: #13151f;
-  --bg-card-hover: #181b27;
-  --accent: #4c7ef3;
-  --accent-light: #7aa3f7;
-  --accent-glow: rgba(76, 126, 243, 0.15);
-  --text-primary: #ffffff;
-  --text-secondary: #8892a4;
-  --text-muted: #545d6b;
-  --border: rgba(255, 255, 255, 0.07);
-  --border-accent: rgba(76, 126, 243, 0.3);
+  --bg-primary: #f8f9fc;
+  --bg-secondary: #eef1f8;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f4f7ff;
+  --accent: #3b6ef0;
+  --accent-light: #5f8af7;
+  --accent-glow: rgba(59, 110, 240, 0.1);
+  --text-primary: #0d1730;
+  --text-secondary: #4a5568;
+  --text-muted: #94a3b8;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-accent: rgba(59, 110, 240, 0.25);
 }
 
 html {
@@ -98,7 +98,7 @@ button {
   border-color: var(--border-accent);
   background: var(--bg-card-hover);
   transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 50px rgba(59, 110, 240, 0.1);
 }
 
 .btn {
@@ -134,24 +134,24 @@ button {
   border-color: var(--accent-light);
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(76, 126, 243, 0.35);
+  box-shadow: 0 8px 24px rgba(59, 110, 240, 0.3);
 }
 
 .badge {
   display: inline-block;
   padding: 5px 13px;
-  background: rgba(76, 126, 243, 0.12);
-  color: var(--accent-light);
+  background: rgba(59, 110, 240, 0.08);
+  color: var(--accent);
   border-radius: 50px;
   font-size: 0.82rem;
   font-weight: 500;
   margin: 4px 4px 4px 0;
-  border: 1px solid rgba(76, 126, 243, 0.2);
+  border: 1px solid rgba(59, 110, 240, 0.18);
   transition: all 0.2s ease;
 }
 
 .badge:hover {
-  background: rgba(76, 126, 243, 0.2);
+  background: rgba(59, 110, 240, 0.14);
   border-color: var(--accent);
 }
 
@@ -170,7 +170,6 @@ button {
   }
 }
 
-/* Decorative gradient orb */
 .orb {
   position: absolute;
   border-radius: 50%;
