@@ -185,7 +185,7 @@ The portfolio is optimized for performance:
 For inquiries and opportunities:
 
 - Email: babithaantony@gmail.com
-- Phone: (669) 225-3644
+- Phone: +1 (510) 497-0104 1510
 - LinkedIn: https://www.linkedin.com/in/babitha-antony
 
 ## License
