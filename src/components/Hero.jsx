@@ -37,7 +37,7 @@ export default function Hero() {
               View Portfolio
             </a>
             <a
-              href="/babitha-antony-fullstack-resume.pdf"
+              href="./babitha-antony-fullstack-resume.pdf"
               download="babitha-antony-fullstack-resume.pdf"
               className="btn btn-outline"
             >
