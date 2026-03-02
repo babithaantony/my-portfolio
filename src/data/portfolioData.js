@@ -1,7 +1,7 @@
 export const portfolioData = {
   personal: {
     name: "Babitha Antony",
-    title: "Software Engineer IV | Fullstack Developer",
+    title: "Software Engineer | Fullstack Developer",
     location: "Fremont, California, United States",
     email: "babithaantony@gmail.com",
     phone: "+1 (510) 497-0104",
@@ -69,14 +69,16 @@ export const portfolioData = {
       "JavaScript (ES6+)",
       "Redux",
       "Context API",
-      "Hooks",
+      "React Hooks",
       "HTML5",
       "CSS3",
       "SCSS",
+      "CSS Modules",
       "MUI",
       "Responsive Design",
       "Accessibility (ARIA)",
       "Performance Optimization",
+      "Virtual DOM & Reconciliation",
     ],
     backend: [
       "Node.js",
@@ -87,6 +89,7 @@ export const portfolioData = {
       "AWS SQS",
       "Serverless Architecture",
       "Microservices",
+      "Fastify",
     ],
     tools: [
       "Git / GitHub",
@@ -110,6 +113,12 @@ export const portfolioData = {
       "Test-Driven Development",
       "Component Architecture",
       "A/B Testing",
+    ],
+    softSkills: [
+      "Problem-Solving & Critical Thinking",
+      "Communication & Teamwork",
+      "Adaptability & Willingness to Learn",
+      "Attention to Detail",
     ],
     databases: ["MySQL", "DynamoDB", "NoSQL", "Relational Databases"],
     legacy: ["PHP", "CakePHP", "jQuery", "Apache", "cPanel"],
@@ -207,7 +216,7 @@ export const portfolioData = {
     averageRating: 4.9,
     totalReviews: 77,
     positiveRating: "99-100%",
-    source: "PeoplePerHour",
+    source: "PeoplePerHour.com",
   },
 
   professionalRecommendations: [
@@ -223,16 +232,6 @@ export const portfolioData = {
     },
     {
       id: 2,
-      name: "Isabella Thomaz",
-      title: "Principal Software Engineer",
-      company: "Purple",
-      relationship: "Manager",
-      date: "January 30, 2026",
-      text: "Babitha is one of the best engineers I've ever had the honor of working with. Her passion for software development shows in the way she approaches every challenge—she isn't afraid to dig deep into complex technical solutions across the entire stack. From backend architecture to front-end execution, she consistently delivers high-quality results and handles technical complexity with total confidence. She is exactly the kind of developer you want leading a project.",
-      highlight: "Full Stack Mastery",
-    },
-    {
-      id: 3,
       name: "Marcelo Soria",
       title: "AWS Certified Solutions Architect",
       company: "Purple",
@@ -240,6 +239,16 @@ export const portfolioData = {
       date: "January 16, 2026",
       text: "Having worked alongside many engineers in complex software architectures, I can say that finding someone who balances technical depth with a genuine passion for the craft is rare. What stands out most is not just her ability to navigate both the frontend and backend with ease, but the contagious energy she brings to a sprint. She is incredibly easy to work with, fostering a collaborative environment even during the most demanding phases of a project. She is a professional who never settles for 'just getting it done.' She is always willing to learn, staying ahead of industry trends and consistently applying best practices to ensure the scalability and maintainability of the code. I recommend her 100% for any engineering team.",
       highlight: "Collaborative & Passionate",
+    },
+    {
+      id: 3,
+      name: "Isabella Thomaz",
+      title: "Principal Software Engineer",
+      company: "Purple",
+      relationship: "Manager",
+      date: "January 30, 2026",
+      text: "Babitha is one of the best engineers I've ever had the honor of working with. Her passion for software development shows in the way she approaches every challenge—she isn't afraid to dig deep into complex technical solutions across the entire stack. From backend architecture to front-end execution, she consistently delivers high-quality results and handles technical complexity with total confidence. She is exactly the kind of developer you want leading a project.",
+      highlight: "Full Stack Mastery",
     },
     {
       id: 4,

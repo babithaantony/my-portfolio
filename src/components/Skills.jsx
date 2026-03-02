@@ -2,22 +2,54 @@ import { portfolioData } from "../data/portfolioData";
 import "./Skills.css";
 
 const skillIcons = {
-  React: "⚛️", TypeScript: "🔷", "JavaScript (ES6+)": "🟨",
-  Redux: "🔴", "Context API": "🔗", Hooks: "🪝",
-  HTML5: "🌐", CSS3: "🎨", SCSS: "💅", MUI: "🎯",
-  "Responsive Design": "📱", "Accessibility (ARIA)": "♿",
+  React: "⚛️",
+  TypeScript: "🔷",
+  "JavaScript (ES6+)": "🟨",
+  Redux: "🔴",
+  "Context API": "🔗",
+  Hooks: "🪝",
+  HTML5: "🌐",
+  CSS3: "🎨",
+  SCSS: "💅",
+  MUI: "🎯",
+  "Responsive Design": "📱",
+  "Accessibility (ARIA)": "♿",
   "Performance Optimization": "⚡",
-  "Node.js": "🟢", "REST APIs": "🔌", "AWS Lambda": "λ",
-  "API Gateway": "🚪", "AWS Cognito": "🔐", "AWS SQS": "📨",
-  "Serverless Architecture": "☁️", Microservices: "🧩",
-  MySQL: "🐬", DynamoDB: "📦", NoSQL: "🗄️", "Relational Databases": "🔢",
-  "Git / GitHub": "🐙", "GitHub Actions": "⚙️", "GitHub CI/CD": "🔄",
-  Jest: "🃏", Webpack: "📦", ESLint: "✅", Docker: "🐳",
-  "AWS CloudWatch": "👁️", Figma: "🎨", Jira: "📋", NPM: "📦",
-  Postman: "📮", "Developer Tools": "🛠️",
-  Agile: "🔁", Scrum: "📌", "Test-Driven Development": "🧪",
-  "Component Architecture": "🏗️", "A/B Testing": "🔬",
-  PHP: "🐘", CakePHP: "🎂", jQuery: "💎", Apache: "🦁", cPanel: "🖥️",
+  "Node.js": "🟢",
+  "REST APIs": "🔌",
+  "AWS Lambda": "λ",
+  "API Gateway": "🚪",
+  "AWS Cognito": "🔐",
+  "AWS SQS": "📨",
+  "Serverless Architecture": "☁️",
+  Microservices: "🧩",
+  MySQL: "🐬",
+  DynamoDB: "📦",
+  NoSQL: "🗄️",
+  "Relational Databases": "🔢",
+  "Git / GitHub": "🐙",
+  "GitHub Actions": "⚙️",
+  "GitHub CI/CD": "🔄",
+  Jest: "🃏",
+  Webpack: "📦",
+  ESLint: "✅",
+  Docker: "🐳",
+  "AWS CloudWatch": "👁️",
+  Figma: "🎨",
+  Jira: "📋",
+  NPM: "📦",
+  Postman: "📮",
+  "Developer Tools": "🛠️",
+  Agile: "🔁",
+  Scrum: "📌",
+  "Test-Driven Development": "🧪",
+  "Component Architecture": "🏗️",
+  "A/B Testing": "🔬",
+  PHP: "🐘",
+  CakePHP: "🎂",
+  jQuery: "💎",
+  Apache: "🦁",
+  cPanel: "🖥️",
 };
 
 export default function Skills() {
@@ -30,12 +62,25 @@ export default function Skills() {
     { title: "Tools & DevOps", icon: "🛠️", skills: skills.tools },
     { title: "Methodologies", icon: "🔁", skills: skills.methodologies },
     { title: "Web Technologies", icon: "🌐", skills: skills.legacy },
+    { title: "Soft Skills", icon: "🤝", skills: skills.softSkills },
   ];
 
   const specializations = [
-    { icon: "⚡", title: "Performance", desc: "Code splitting, lazy loading, Core Web Vitals" },
-    { icon: "♿", title: "Accessibility", desc: "WCAG 2.1, ARIA, inclusive design" },
-    { icon: "🏗️", title: "Architecture", desc: "Scalable, maintainable component systems" },
+    {
+      icon: "⚡",
+      title: "Performance",
+      desc: "Code splitting, Bundling, Lazy loading, Core Web Vitals",
+    },
+    {
+      icon: "♿",
+      title: "Accessibility",
+      desc: "WCAG 2.1, ARIA, inclusive design",
+    },
+    {
+      icon: "🏗️",
+      title: "Architecture",
+      desc: "Scalable, maintainable component systems",
+    },
     { icon: "🔧", title: "Full Stack", desc: "End-to-end from database to UI" },
   ];
 
@@ -59,7 +104,11 @@ export default function Skills() {
               <div className="skill-tags">
                 {cat.skills.map((skill) => (
                   <span key={skill} className="skill-tag">
-                    {skillIcons[skill] && <span className="skill-tag-icon">{skillIcons[skill]}</span>}
+                    {skillIcons[skill] && (
+                      <span className="skill-tag-icon">
+                        {skillIcons[skill]}
+                      </span>
+                    )}
                     {skill}
                   </span>
                 ))}

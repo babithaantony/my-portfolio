@@ -376,7 +376,15 @@
   }
 
   .hero-visual {
-    min-height: 380px;
+    min-height: auto;
+    height: auto;
+    padding: 16px 0 24px;
+  }
+
+  .avatar-wrap {
+    width: min(415px, calc(100vw - 80px));
+    height: auto;
+    aspect-ratio: 415 / 500;
   }
 
   .stat-float-1 {
@@ -400,19 +408,37 @@
 }
 
 @media (max-width: 480px) {
-  .hero {
-    padding: 100px 0 60px;
-  }
-
   .hero-heading {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
   }
 
   .hero-visual {
-    min-height: 300px;
+    min-height: auto;
+    height: auto;
+    padding: 16px 0 24px;
+  }
+
+  .avatar-wrap {
+    width: min(280px, 78vw);
+    height: min(340px, 94vw);
   }
 
   .avatar-initials {
     font-size: 3rem;
+  }
+
+  .stat-float-1,
+  .stat-float-2 {
+    display: none;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
