@@ -396,10 +396,15 @@
     right: 20px;
   }
   .stat-float-3 {
-    display: none;
+    display: flex;
+    bottom: 130px;
+    left: 20px;
   }
   .stat-float-4 {
-    display: none;
+    display: flex;
+    bottom: auto;
+    top: 100px;
+    right: 20px;
   }
 
   .dots-grid {
@@ -427,9 +432,36 @@
     font-size: 3rem;
   }
 
-  .stat-float-1,
+  .stat-float-1 {
+    top: 12px;
+    left: 8px;
+    padding: 10px 12px;
+  }
+
   .stat-float-2 {
-    display: none;
+    bottom: 28px;
+    right: 8px;
+    padding: 10px 12px;
+  }
+
+  .stat-float-3 {
+    bottom: 90px;
+    left: 8px;
+    padding: 10px 12px;
+  }
+
+  .stat-float-4 {
+    top: 70px;
+    right: 8px;
+    padding: 10px 12px;
+  }
+
+  .sf-num {
+    font-size: 1.1rem;
+  }
+
+  .sf-label {
+    font-size: 0.68rem;
   }
 
   .hero-actions {
