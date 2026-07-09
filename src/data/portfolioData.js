@@ -4,7 +4,6 @@ export const portfolioData = {
     title: "Software Engineer | Fullstack Developer",
     location: "Fremont, California, United States",
     email: "babithaantony@gmail.com",
-    phone: "+1 (510) 497-0104",
     linkedin: "https://www.linkedin.com/in/babitha-antony",
     summary:
       "Software Engineer with 9+ years of industry experience and 5+ years specializing in modern tech stack (React, TypeScript, Node.js, AWS). Expert in building high-performance e-commerce applications, with focus on checkout systems, accessibility, frontend performance, and cross-functional delivery.",
