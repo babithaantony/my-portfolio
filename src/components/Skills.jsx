@@ -50,6 +50,22 @@ const skillIcons = {
   jQuery: "💎",
   Apache: "🦁",
   cPanel: "🖥️",
+  "Next.js": "▲",
+  "Tailwind CSS": "🌊",
+  "Express.js": "🚂",
+  "AWS SES": "📧",
+  "AWS SNS": "📣",
+  "Stripe API": "💳",
+  "Cloudflare R2": "☁️",
+  Vitest: "🧪",
+  Playwright: "🎭",
+  Prometheus: "🔥",
+  Grafana: "📈",
+  PostgreSQL: "🐘",
+  "OpenAI API": "🤖",
+  "TensorFlow.js": "🧠",
+  "p5.js": "🎨",
+  "Pitch/Anomaly Detection": "📡",
 };
 
 export default function Skills() {
@@ -58,6 +74,7 @@ export default function Skills() {
   const categories = [
     { title: "Frontend", icon: "⚛️", skills: skills.frontend },
     { title: "Backend & Cloud", icon: "☁️", skills: skills.backend },
+    { title: "AI & Machine Learning", icon: "🤖", skills: skills.ai },
     { title: "Databases", icon: "🗄️", skills: skills.databases },
     { title: "Tools & DevOps", icon: "🛠️", skills: skills.tools },
     { title: "Methodologies", icon: "🔁", skills: skills.methodologies },
