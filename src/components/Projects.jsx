@@ -7,9 +7,13 @@ const projectColors = [
   ["#4a148c", "#6a1b9a"],
   ["#bf360c", "#d84315"],
   ["#006064", "#00838f"],
+  ["#880e4f", "#ad1457"],
+  ["#e65100", "#ef6c00"],
+  ["#33691e", "#558b2f"],
+  ["#0d47a1", "#1565c0"],
 ];
 
-const projectIcons = ["🛍️", "☁️", "⚛️", "⚡", "🌐"];
+const projectIcons = ["🛍️", "☁️", "⚛️", "⚡", "🌐", "📋", "📊", "🎵", "🛒"];
 
 export default function Projects() {
   const { projects } = portfolioData;
@@ -58,8 +62,14 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  <a href="#contact" className="proj-link">
-                    Learn More
+                  <a
+                    href={project.link || "#contact"}
+                    className="proj-link"
+                    {...(project.link
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
+                  >
+                    {project.link ? "View on GitHub" : "Learn More"}
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
                     </svg>
